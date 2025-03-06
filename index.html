@@ -1,0 +1,84 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cafeteros RP - Servidor MTA</title>
+    <link rel="stylesheet" href="styles.css">
+    <img rel="icon" href="./img/logo cafeteros.jpg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
+</head>
+<body>
+
+    <!-- Barra de navegación con menú hamburguesa -->
+    <nav class="navbar">
+        <div class="logo">
+            <img src="./img/logo cafeteros.jpg" alt="Cafeteros RP" >
+        </div>
+        <ul class="nav-links">
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#sobre">Sobre Nosotros</a></li>
+            <li><a href="#features">Características</a></li>
+            <li><a href="https://drive.google.com/file/d/1NbYAAUCRUw7M3B0znpaFyFoB8rSOfVw2/view?usp=sharing"target="_blank" rel="noopener noreferrer">Descargar Juego</a></li>
+            <li><a href="https://multitheftauto.com/" target="_blank" rel="noopener noreferrer">Descargar MTA</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+            <li><a href="#IP">IP</a></li>
+        </ul>
+        <div class="menu-toggle" onclick="toggleMenu()">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+    </nav>
+
+    <!-- Sección Hero -->
+    <header class="hero" id="inicio">
+        <div class="hero-content">
+            <h1>Bienvenido a Cafeteros RP</h1>
+            <p>El mejor servidor de rol en MTA San Andreas</p>
+            <a href="#IP" class="btn">Únete Ahora</a>
+        </div>
+    </header>
+
+    <!-- Secciones de contenido -->
+    <section class="section" id="sobre">
+        <h2>Sobre Nosotros</h2>
+        <p>Somos un servidor de rol serio inspirado en la vida y cultura de Colombia.</p>
+    </section>
+
+    <section class="section" id="features">
+        <h2>Características</h2>
+        <ul>
+            <p>✔️ Mapas personalizados</p>
+            <p>✔️ Economía realista</li>
+            <p>✔️ Trabajo policial, criminal y civil</p>
+            <p>✔️ Eventos y actualizaciones constantes</p>
+        </ul>
+    </section>
+
+    <section class="section" id="contacto">
+        <h2>Contacto</h2>
+        <p>Únete a nuestra comunidad en Discord y síguenos en redes sociales.</p>
+        <a href="#" class="btn">Discord Oficial</a>
+    </section>
+
+    <section class="section" id="IP">
+        <h2>IP SERVER</h2>
+        <p>Conéctate con la IP: 144.217.16.120:36247</p>
+    </section>
+
+    <footer class="footer">
+        <p>&copy; 2025 Cafeteros RP - Todos los derechos reservados</p>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            document.querySelector('.nav-links').classList.toggle('active');
+            document.querySelector('.menu-toggle').classList.toggle('open');
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,178 @@
+
+/* Importamos una fuente moderna y estilizada */
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;700&display=swap');
+
+/* Configuración general */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Oswald', sans-serif;
+    background: #111;
+    color: white;
+    text-align: center; /* Centra todo el texto por defecto */
+}
+
+/* Barra de navegación */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 20px;
+    z-index: 1000;
+}
+
+/* Logo */
+.logo img {
+    height: 50px;
+}
+
+/* Menú de navegación */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links li {
+    display: inline;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #FFD700;
+}
+
+/* Botón hamburguesa */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.menu-toggle .bar {
+    background: white;
+    height: 4px;
+    width: 30px;
+    margin: 4px 0;
+    transition: 0.3s;
+}
+
+/* Sección Hero */
+.hero {
+    background: url('img/fondo.jpg') no-repeat center center/cover;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+}
+
+.hero::after {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+.hero h1 {
+    font-size: 4rem;
+    text-transform: uppercase;
+    background: linear-gradient(90deg, #FFD700, #0057B8, #D52B1E);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.hero p {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+/* Botón */
+.btn {
+    padding: 12px 30px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: white;
+    background: linear-gradient(90deg, #D52B1E, #FFD700, #0057B8);
+    border-radius: 5px;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: linear-gradient(90deg, #0057B8, #FFD700, #D52B1E);
+    transform: scale(1.1);
+}
+
+/* Secciones generales */
+.section {
+    padding: 100px 20px;
+    text-align: center; /* Centra el texto dentro de cada sección */
+    max-width: 800px;
+    margin: 0 auto; /* Centra el contenido en la pantalla */
+}
+
+/* RESPONSIVE: Estilos para móviles */
+@media screen and (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        background: rgba(0, 0, 0, 0.9);
+        text-align: center;
+        padding: 20px 0;
+        transition: all 0.5s ease-in-out;
+    }
+
+    .nav-links.active {
+        display: flex;
+        animation: fadeIn 0.5s ease-in-out;
+    }
+
+    .menu-toggle {
+        display: flex;
+    }
+
+    .menu-toggle.open .bar:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+    }
+
+    .menu-toggle.open .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .menu-toggle.open .bar:nth-child(3) {
+        transform: rotate(-45deg) translate(5px, -5px);
+    }
+
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+            transform: translateY(-20px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+}
